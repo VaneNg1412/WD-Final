@@ -1,0 +1,236 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,500;0,600;0,700;1,400&family=Chonburi&family=Lexend:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Spectral+SC:wght@300;400;500;600;700;800&display=swap');
+/* CSS Document */
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+#wrapper{
+	width: 100%;
+}
+hr{
+	width: 60%;
+	margin: 8px auto;
+	border-top: thin solid #FFEBB8 !important;
+	border: none;
+}
+#menu-hor{
+	width: 100%;
+	height: 120px;
+	padding: 24px 80px;
+	position: absolute;
+	top: 0;
+	left:0;
+	z-index: 1100;
+	position: fixed;
+/*	background: tomato;*/
+}
+.menu-hor hr{
+	width: 70%;
+	color: white;
+}
+#navbar, #logo, #menu-hor, #hr{
+	transition: 0.4s;
+}
+.logo{
+	padding-top: 8px;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	color: #FFEBB8;
+}
+.logo img{
+	width: 15%;
+	margin-right: 10px;
+}
+.logo h2{
+	font-family: 'Spectral SC', serif;
+	font-size: 24pt;
+	line-height: 28px;
+	color: #FFEBB8;
+	font-weight: 500;
+}
+.navbar{
+	display: flex;
+	justify-content: flex-end;
+	padding-top: 12px;
+}
+.navbar ul{
+	display: flex;
+	font-family: 'Cabin', sans-serif;
+	font-size: 15px;
+	font-weight: 500;
+	color: #FFEBB8;
+}
+.navbar li{
+	list-style: none;
+	padding: 14px 28px;
+}
+.navbar a{
+	text-decoration: none;
+	color: #FFEBB8;
+}
+.navbar a:hover{
+	color: #FFB100;
+}
+.dropdown {
+  	float: left;
+ 	overflow: hidden;
+}
+.dropdown .dropbtn {
+	font-size: 15px;  
+	border: none;
+	outline: none;
+	color: white;
+	padding: 0px 0px 14px;
+	background-color: inherit;
+	font-family: inherit;
+	margin: 0;
+}
+.dropdown-content {
+  	display: none;
+  	position: absolute;
+  	background-color: #F9F9F9;
+  	min-width: 160px;
+	border-radius: 5px;
+  	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  	z-index: 1;
+	margin-top: 0px;
+}
+.dropdown-content a {
+  	float: none;
+  	color: #313030;
+	font-size: 14pt;
+	font-weight: normal;
+  	padding: 14px 16px;
+  	text-decoration: none;
+  	display: block;
+  	text-align: left;
+}
+.dropdown:hover .dropdown-content {
+  	display: block;
+}
+ion-icon{
+	font-size: 14px;
+	color: #FFEBB8;
+}
+ion-icon:hover{
+	color: #FFB100;
+}
+/*main*/
+#main {
+	transition: margin-right 0.5s;
+}
+#section-1{
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	top:0;
+	left:0;
+	background-color: rgba(0,0,0,0.50);
+	background-image: url("../images/BG.jpg");
+	background-size: cover;
+	background-blend-mode: overlay;
+	background-attachment: fixed;
+}
+.container{
+	width: 100%;
+	overflow: hidden;
+}
+.section-title-light h1{
+	text-align: center;
+	font-family: 'Spectral SC', serif;
+	font-weight: 600;
+	font-size: 32pt;
+	color: #FFEBB8;
+	line-height: 80px
+}
+.video{
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	top: 63%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 1;
+	overflow: hidden;
+	animation: banner 1s -0.5s ease-in-out forwards;
+}
+video{
+	width: 60%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	box-shadow: 2px 2px 20px rgba(255,255,255,0.1);
+}
+.foot{
+	width: 100%;
+	height: 250px;
+	display: flex;
+	align-items: center;
+	align-content: center;
+	justify-content: space-between;
+	padding: 0 100px;
+	overflow: hidden;
+	background-color: #03030A;
+}
+.foot h4{
+	text-align: left;
+	font-family: 'Spectral SC', serif;
+	font-weight: 700;
+	font-size: 14pt;
+	color: #FFEBB8;
+	line-height: 28px;
+}
+.foot p{
+	text-align: left;
+	font-family: 'Cabin', sans-serif;
+	font-weight: 400;
+	font-size: 10pt;
+	color: #FFEBB8;
+}
+.Hogwarts, .MoM{
+	display: flex;
+	align-items: center;
+}
+.foot-logo{
+	width: 15%;
+	margin: 0 20px;
+}
+.foot-logo img{
+	width: 100%;
+}
+.MoM{
+	flex-direction: row-reverse;
+}
+.MoM h4, .MoM p{
+	text-align: right;
+}
+/*to-top*/
+#myBtn {
+	width: 60px;
+	height: 60px;
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 40px;
+  z-index: 2000;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: rgba(255,247,229,0.70);
+  color: #08081D;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+#myBtn:hover {
+  background-color: #FFEBB8;
+}
+#myBtn ion-icon{
+	font-size: 28px;
+	color: #08081D;
+}

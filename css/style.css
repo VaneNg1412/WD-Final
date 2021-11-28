@@ -1,0 +1,1025 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,500;0,600;0,700;1,400&family=Chonburi&family=Lexend:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Spectral+SC:wght@300;400;500;600;700;800&display=swap');
+/* CSS Document */
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+#wrapper{
+	width: 100%;
+}
+.break{
+	width: 100%;
+	height: 900px;
+}
+.breakwhite{
+	background-color: rgba(0,0,0,0.50);
+	background-image: url("../images/BG.jpg");
+	background-size: cover;
+	background-blend-mode: overlay;
+	background-attachment: fixed;
+	height: 150px;
+	width: 100%;
+}
+.lib{
+	background-image: url("../images/library.jpg");
+	background-color: rgba(0,0,0,0.5);
+	background-blend-mode: overlay;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center center;
+}
+.common{
+	background-image: url("../images/common.jpg");
+	background-color: rgba(0,0,0,0.5);
+	background-blend-mode: overlay;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center center;
+}
+#menu-hor{
+	width: 100%;
+	height: 120px;
+	padding: 24px 80px;
+	top: 0;
+	left:0;
+	z-index: 1100;
+	position: fixed;
+/*	background: tomato;*/
+}
+.menu-hor hr{
+	width: 70%;
+	color: white;
+}
+#navbar, #logo, #menu-hor, #hr{
+	transition: 0.4s;
+}
+.logo{
+	padding-top: 8px;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	color: #FFEBB8;
+}
+.logo img{
+	width: 15%;
+	margin-right: 10px;
+}
+.logo h2{
+	font-family: 'Spectral SC', serif;
+	font-size: 24pt;
+	line-height: 28px;
+	color: #FFEBB8;
+	font-weight: 500;
+}
+.navbar{
+	display: flex;
+	justify-content: flex-end;
+	padding-top: 12px;
+}
+.navbar ul{
+	display: flex;
+	font-family: 'Cabin', sans-serif;
+	font-size: 15px;
+	font-weight: 500;
+	color: #FFEBB8;
+}
+.navbar li{
+	list-style: none;
+	padding: 14px 28px;
+}
+.navbar a{
+	text-decoration: none;
+	color: #FFEBB8;
+}
+.navbar a:hover{
+	color: #FFB100;
+}
+.dropdown {
+  	float: left;
+ 	overflow: hidden;
+}
+.dropdown .dropbtn {
+	font-size: 15px;  
+	border: none;
+	outline: none;
+	color: white;
+	padding: 0px 0px 14px;
+	background-color: inherit;
+	font-family: inherit;
+	margin: 0;
+}
+.dropdown-content {
+  	display: none;
+  	position: absolute;
+  	background-color: #F9F9F9;
+  	min-width: 160px;
+	border-radius: 5px;
+  	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  	z-index: 1;
+	margin-top: 0px;
+}
+.dropdown-content a {
+  	float: none;
+  	color: #313030;
+	font-size: 14pt;
+	font-weight: normal;
+  	padding: 14px 16px;
+  	text-decoration: none;
+  	display: block;
+  	text-align: left;
+}
+.dropdown:hover .dropdown-content {
+  	display: block;
+}
+ion-icon{
+	font-size: 14px;
+	color: #FFEBB8;
+}
+ion-icon:hover{
+	color: #FFB100;
+}
+@media screen and (max-height: 500px){
+	#menu-hor{
+		height: 200px !important;
+		transition: 0.4s;
+	}
+	hr{
+		display: none;
+		transition: 0.4s;
+	}
+}
+@media screen and (max-width: 1100px){
+	.row{
+		flex-direction: column;
+		align-items: center;
+		transition: 0.4s;
+	}
+	#menu-hor{
+		height: 300px;
+		transition: 0.4s;
+	}
+	hr{
+		display: none;
+		transition: 0.4s;
+	}
+	.banner{
+		transform: scale(0.7);
+		transition: 0.4s;
+	}
+}
+/*ver-menu*/
+.sidebar {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1000;
+	top: 0px;
+	right: 0;
+	background-color: #03030A;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 170px;
+}
+
+.sidebar a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 18px;
+	font-family: 'Cabin', sans-serif;
+	line-height: 30px;
+	color: #FFEBB8;
+	display: block;
+	transition: 0.3s;
+}
+hr{
+	width: 60%;
+	margin: 8px auto;
+	border-top: thin solid #FFEBB8 !important;
+	border: none;
+}
+.sidebar a:hover{
+	color: #FFB100;
+}
+
+.sidebar .closebtn {
+	position: absolute;
+	top: 15%;
+	left: 0;
+	font-size: 30px;
+	z-index: 5000;
+}
+.openbtn {
+	font-size: 14pt;
+	background-color: inherit;
+	color: white;
+	padding: 0px 28px;
+	border: none;
+}
+.openbtn:hover {
+  	color: #FFB100;
+}
+.list{
+	font-size: 22px;
+}
+@media screen and (max-height: 450px) {
+	.sidebar {padding-top: 15px;}
+	.sidebar a {font-size: 18px;}
+}
+/*main*/
+#main {
+	transition: margin-right 0.5s;
+}
+#section-1{
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	top:0;
+	left:0;
+	background-color: rgba(0,0,0,0.50);
+	background-image: url("../images/hogwarts symbol white.png"),url("../images/BG.jpg");
+	background-size: contain, cover;
+	background-blend-mode: overlay;
+	background-attachment: fixed;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+.container{
+	width: 100%;
+	overflow: hidden;
+}
+/*section1*/
+.banner{
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	overflow: hidden;
+	animation: banner 1s -0.5s ease-in-out forwards;
+}
+.banner img{
+	width: 100%;
+}
+.bntxt{
+	padding: 0 100px;
+	position: absolute;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 20;
+	text-align: center;
+}
+.line1{
+	font-family: 'Playfair Display', serif;
+	font-weight: 700;
+	font-size: 20pt;
+	font-style: oblique;
+	color: #CBE2FD;
+	line-height: 80px;
+	animation: topin 1s  ease-in-out forwards;
+}
+.line2{
+	font-family: 'Spectral SC', serif;
+	font-weight: 600;
+	font-size: 72pt;
+	color: #FFEBB8;
+	line-height: 120px;
+	animation: rightin 1s ease-in-out forwards;
+}
+.line3{
+	font-family: 'Playfair Display', serif;
+	font-weight: 500;
+	font-size: 18pt;
+	font-style: italic;
+	color: #CBE2FD;
+	line-height: 40px;
+	animation: botin 1s ease-in-out forwards;
+}
+.bntxt img{
+	width: 40%;
+	margin: 20px 0;
+}
+@media screen and (max-height: 700px){
+	.line1{
+		line-height: 40px;
+		font-size: 16pt;
+		transition: 0.4s;
+	}
+	.line2{
+		line-height: 40px;
+		font-size: 48pt;
+		transition: 0.4s;
+	}
+	.line3{
+		line-height: 40px;
+		font-size: 14pt;
+		transition: 0.4s;
+	}
+	.bntxt img{
+		margin: 10px 0 0;
+		transition: 0.4s;
+	}
+}
+/*section2*/
+#section-2{
+	width: 100%;
+	height: 450px;
+	padding: 0 100px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(0,0,0,0.50);
+	background-image: url("../images/BG.jpg");
+	background-size: cover;
+	background-blend-mode: overlay;
+	background-attachment: fixed;
+}
+
+/*flipcard*/
+.flip-card {
+  	background-color: transparent;
+ 	width: 30%;
+ 	height: 280px;
+  	perspective: 1000px;
+	padding: 0 10px;
+}
+
+.flip-card-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.6s;
+	transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  	transform: rotateY(180deg);
+	transition-duration: 0.8s;
+}
+
+.flip-card-front, .flip-card-back {
+	position: absolute;
+	top: 0%;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-radius: 5px;
+}
+
+.flip-card-front {
+  	background-color: rgba(255,247,229,0.70);
+  	color: black;
+}
+.flip-card-front h2{
+	font-family: 'Cabin', sans-serif;
+	font-weight: 700;
+	font-size: 20pt;
+	color: #0D0B22;
+}
+.flip-card-front img{
+	width: 30%;
+	margin-bottom: 20px;
+}
+.flip-card-back {
+	background-color: rgba(255,247,229,0.70);
+	color: white;
+	padding: 0 28px;
+	transform: rotateY(180deg);
+}
+.flip-card-back p{
+	font-family: 'Cabin', sans-serif;
+	font-weight: 600;
+	font-size: 14pt;
+	color: #03030A;
+}
+
+/*section3*/
+#section-3{
+	width: 100%;
+	padding: 80px 40px;
+	background-image: url("../images/classroom.jpg");
+	background-color: #272727;
+	background-blend-mode: overlay;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+.section-title-light h1{
+	text-align: center;
+	font-family: 'Spectral SC', serif;
+	font-weight: 600;
+	font-size: 32pt;
+	color: #FFEBB8;
+	line-height: 60px
+}
+.section-title-light p{
+	font-family: 'Cabin', sans-serif;
+	font-weight: 400;
+	font-size: 14pt;
+	color: #F9EFD7;
+	text-align: center;
+	margin-bottom: 32px;
+}
+.section-title-light img{
+	width: 20%;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
+	margin: 0 0 32px 0;
+}
+/* Center website */
+.main {
+  	margin: auto;
+	padding: 0px 200px;
+}
+
+.row1 {
+  	margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row1,
+.row1 > .column {
+  	padding: 0px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  	float: left;
+ 	 width: 33.33%;
+  	display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */ 
+.row1:after {
+  	content: "";
+  	display: table;
+  	clear: both;
+}
+
+/* Content */
+.content3 {
+  	background-color: rgba(255,247,229,0.70);
+	height: 360px;
+	width: 100%;
+	text-align: center;
+	overflow: hidden;
+	border: none;
+}
+.content3:hover{
+	animation: zoom-in 0.4s linear forwards;
+}
+.content3 h4{
+	font-family: 'Cabin', sans-serif;
+	font-weight: 800;
+	font-size: 16pt;
+	color: #08081D;
+	text-align: center;
+	line-height: 28px;
+	margin-top: 10px;
+}
+.content3 p{
+	font-family: 'Cabin', sans-serif;
+	font-weight: 400;
+	font-size: 13pt;
+	font-style: italic;
+	color: #272727;
+	text-align: center;
+	line-height: 20px;
+	
+}
+.ava{
+	width: 100%;
+	height: 250px;
+	overflow: hidden;
+	position: relative;
+}
+.ava img{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+/* The "show" class is added to the filtered elements */
+.show {
+  	display: block;
+}
+#myBtnContainer{
+	display: flex;
+	justify-content: center;
+}
+/* Style the buttons */
+.btn1 {
+	border: none;
+	outline: none;
+	padding: 12px 16px;
+	background-color: #FFB100;
+	cursor: pointer;
+	color: #03030A;
+	font-family: 'Cabin', sans-serif;
+	font-size: 14pt;
+	font-weight: 800;
+	border-radius: 20px;
+	margin: 0 4px 20px;
+}
+.btn1:hover {
+  	background-color: #CBE2FD;
+	color: #03030A;
+}
+
+.btn1.active1 {
+	background-color: #08081D;
+	color: #CBE2FD;
+}
+/*section4*/
+#section-4{
+	width: 100%;
+	padding: 60px 0px 0;
+	background-color: white;
+}
+.semestre{
+	position: relative;
+}
+.timeline{
+	width: 100%;
+	height: 600px;
+	border: none;
+	outline: none;
+}
+/*section4*/
+#section-4{
+	background-color: rgba(0,0,0,0.50);
+	background-image: url("../images/BG.jpg");
+	background-size: cover;
+	background-blend-mode: overlay;
+	background-attachment: fixed;
+}
+/*section5*/
+#section-5{
+	width: 100%;
+	padding: 100px 0 150px;
+	background-color: rgba(0,0,0,0.50);
+	background-image: url("../images/BG.jpg");
+	background-size: cover;
+	background-blend-mode: overlay;
+	background-attachment: fixed;
+	position: relative;
+	margin: 0 auto;
+}
+.section-title h1{
+	text-align: center;
+	font-family: 'Spectral SC', serif;
+	font-weight: 700;
+	font-size: 36pt;
+	color: #262262;
+/*	line-height: 60px*/
+}
+.section-title p{
+	font-family: 'Cabin', sans-serif;
+	font-weight: 400;
+	font-size: 14pt;
+	color: #272727;
+	text-align: center;
+	margin-bottom: 32px;
+}
+.section-title img{
+	width: 20%;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
+	margin: 0 0 32px 0;
+}
+.crest{
+	border: none;
+	outline: none;
+	width: 100%;
+	height: 100vh;
+}
+/*section6*/
+
+#section-6{
+	width: 100%;
+	padding: 100px 200px 150px;
+	background-color: rgba(0,0,0,0.50);
+	background-image: url("../images/BG.jpg");
+	background-size: cover;
+	background-blend-mode: overlay;
+	background-attachment: fixed;
+	position: relative;
+	margin: 0 auto;
+}
+.row2 {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column2 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 20px;
+}
+
+.column2 img {
+  margin-top: 20px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column2 {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column2 {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+.myImg {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100vh; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+	z-index: 2000;
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+	height: 80%;
+  max-width: 700px;
+	z-index: 2000;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+  color: #FFB100;
+  padding: 10px 0;
+  height: 150px;
+	z-index: 2000;
+	font-family: 'Cabin', sans-serif;
+	font-weight: 400;
+	font-size: 16pt;
+	margin-top: 12px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+	z-index: 200;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: normal;
+  transition: 0.3s;
+	z-index: 2000;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+	z-index: 2000;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+/*section7*/
+#section-7{
+	width: 100%;
+	padding: 80px 0 150px;
+	background-image: url("../images/bg hogwarts.png");
+	background-color: rgba(0,0,0,0.70);
+	background-blend-mode: overlay;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center center;
+	position: relative;
+	margin: 0 auto;
+}
+.mySlides {display: none}
+.mySlides img {
+	vertical-align: middle;
+	width: 100%;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 70%;
+  position: relative;
+  margin: auto;
+	box-shadow: 4px 4px 16px rgba(255,255,255,0.5);
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: #262262;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+	background-color: rgba(255,255,255,0.30);
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.70);
+	color: #CBE2FD;
+}
+
+/* Caption text */
+.text {
+  color: #FFB100;
+	font-family: 'Cabin', sans-serif;
+  font-size: 16pt;
+  padding: 40px 12px 16px;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, black 90%);
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 6px;
+  width: 30px;
+  margin: 0 2px;
+  background-color: #FFEBB8;
+  border-radius: 3px;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #FFB100;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+#section-8{
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+	background-color: rgba(0,0,0,0.80);
+	background-image: url("../images/platform.png");
+	background-size: cover;
+	background-blend-mode: overlay;
+	background-attachment: fixed;
+}
+
+.intro{
+	position: absolute;
+	top: 50%;
+	left: 10%;
+	transform: translateY(-50%);
+	max-width: 35%;
+}
+.intro p, .intro h1{
+	text-align: left!important;
+}
+.intro a{
+	font-family: 'Cabin', sans-serif;
+	font-weight: 400;
+	font-size: 14pt;
+	color: #FFB100;
+	text-decoration: none;
+	z-index: 5000;
+}
+
+.intro a:hover {
+	color: #BA7300;
+}
+/*ticket-buy*/
+.ticket-buy{
+	width: 30%;
+	position: absolute;
+	top: 50%;
+	right: 10%;
+	transform: translateY(-50%);
+	padding: 20px;
+}
+.ticket-buy h1{
+ 	 text-align: center;
+	font-family: 'Spectral SC', serif;
+	font-weight: 700;
+	font-size: 28pt;
+	color: #FFB110;
+}
+.ticket-buy p{
+	font-family: 'Cabin', sans-serif;
+	font-weight: 400;
+	font-size: 14pt;
+	color: #FFB100;
+}
+form{
+	padding: 0 20px 40px;
+  background-color:rgba(255,235,184,0.15);
+  border-radius:5px;
+  height:auto;
+  width: 400px;
+	font-family: 'Cabin', sans-serif;
+	font-weight: 400;
+	font-size: 14pt;
+	line-height: 36px;
+	color: #FFEBB8;
+	display: flex;
+	flex-direction: column;
+}
+#wrapper1{
+ float:center;
+	margin-top: 10%;
+}
+input{
+  font-family: 'Cabin', sans-serif;
+  font-size:11px;
+	font-style: italic;
+  font-weight:400;
+	border: none;
+	background-color: rgba(255,255,255,0.70);
+	padding: 8px;
+	border-radius: 5px;
+}
+.submit{
+	background-color: #FFB100;
+	color: #08081D;
+	font-style: normal;
+	font-weight: bolder;
+}
+.submit:hover{
+	background-color: #FFEBB8;
+	color: #262262;
+}
+.foot{
+	width: 100%;
+	height: 250px;
+	display: flex;
+	align-items: center;
+	align-content: center;
+	justify-content: space-between;
+	padding: 0 100px;
+	overflow: hidden;
+	background-color: #03030A;
+}
+.foot h4{
+	text-align: left;
+	font-family: 'Spectral SC', serif;
+	font-weight: 700;
+	font-size: 14pt;
+	color: #FFEBB8;
+	line-height: 28px;
+}
+.foot p{
+	text-align: left;
+	font-family: 'Cabin', sans-serif;
+	font-weight: 400;
+	font-size: 10pt;
+	color: #FFEBB8;
+}
+.Hogwarts, .MoM{
+	display: flex;
+	align-items: center;
+}
+.foot-logo{
+	width: 15%;
+	margin: 0 20px;
+}
+.foot-logo img{
+	width: 100%;
+}
+.MoM{
+	flex-direction: row-reverse;
+}
+.MoM h4, .MoM p{
+	text-align: right;
+}
+/*to-top*/
+#myBtn {
+	width: 60px;
+	height: 60px;
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 40px;
+  z-index: 2000;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: rgba(255,247,229,0.70);
+  color: #08081D;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+#myBtn:hover {
+  background-color: #FFEBB8;
+}
+#myBtn ion-icon{
+	font-size: 28px;
+	color: #08081D;
+}
