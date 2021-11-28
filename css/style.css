@@ -209,7 +209,7 @@ hr{
 	top: 15%;
 	left: 0;
 	font-size: 30px;
-	z-index:5000;
+	z-index:5000 !important;
 }
 .openbtn {
 	font-size: 14pt;
