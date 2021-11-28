@@ -43,7 +43,6 @@
 	width: 100%;
 	height: 120px;
 	padding: 24px 80px;
-	position: absolute;
 	top: 0;
 	left:0;
 	z-index: 1100;
@@ -141,6 +140,35 @@ ion-icon{
 }
 ion-icon:hover{
 	color: #FFB100;
+}
+@media screen and (max-height: 500px){
+	#menu-hor{
+		height: 200px !important;
+		transition: 0.4s;
+	}
+	hr{
+		display: none;
+		transition: 0.4s;
+	}
+}
+@media screen and (max-width: 1100px){
+	.row{
+		flex-direction: column;
+		align-items: center;
+		transition: 0.4s;
+	}
+	#menu-hor{
+		height: 300px;
+		transition: 0.4s;
+	}
+	hr{
+		display: none;
+		transition: 0.4s;
+	}
+	.banner{
+		transform: scale(0.7);
+		transition: 0.4s;
+	}
 }
 /*ver-menu*/
 .sidebar {
@@ -273,6 +301,27 @@ hr{
 .bntxt img{
 	width: 40%;
 	margin: 20px 0;
+}
+@media screen and (max-height: 700px){
+	.line1{
+		line-height: 40px;
+		font-size: 16pt;
+		transition: 0.4s;
+	}
+	.line2{
+		line-height: 40px;
+		font-size: 48pt;
+		transition: 0.4s;
+	}
+	.line3{
+		line-height: 40px;
+		font-size: 14pt;
+		transition: 0.4s;
+	}
+	.bntxt img{
+		margin: 10px 0 0;
+		transition: 0.4s;
+	}
 }
 /*section2*/
 #section-2{
