@@ -16,7 +16,7 @@
 		
 <!--		ver menu-->
 		<div id="mySidebar" class="sidebar">
-			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+			<a href="javascript:void(0)" class="closebtn" id="closebtn" onclick="closeNav()">×</a>
 			<a href="#section-3">Chương trình đào tạo</a>
 			
 			<a href="#section-4">Năm học thường niên</a>
@@ -525,8 +525,8 @@ window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
   if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
     document.getElementById("menu-hor").style.backgroundColor = "#03030A";
-    document.getElementById("menu-hor").style.height = "140px";
-	document.getElementByClassName("closebtn").style.z = "140px";
+    document.getElementById("menu-hor").style.height = "120px";
+    document.getElementById("closebtn").style.zIndex = "5000 !important";
     document.getElementById("hr").style.display = "none";
     document.getElementById("logo").style.paddingTop = "0";
     document.getElementById("navbar").style.paddingTop = "4px";

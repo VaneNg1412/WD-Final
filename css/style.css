@@ -169,9 +169,6 @@ ion-icon:hover{
 		transform: scale(0.7);
 		transition: 0.4s;
 	}
-	.sidebar{
-	z-index: 3000 !important;
-}
 }
 /*ver-menu*/
 .sidebar {
@@ -212,7 +209,7 @@ hr{
 	top: 15%;
 	left: 0;
 	font-size: 30px;
-	z-index: 5000 !important;
+	z-index: 5000;
 }
 .openbtn {
 	font-size: 14pt;
