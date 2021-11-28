@@ -161,6 +161,8 @@ ion-icon:hover{
 		height: 300px;
 		transition: 0.4s;
 	}
+	.sidebar .closebtn{
+		z-index: 5000 !important;
 	hr{
 		display: none;
 		transition: 0.4s;
